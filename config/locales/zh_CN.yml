@@ -206,8 +206,7 @@ zh_CN:
     migration_error:
       contact_admin: 请联系管理员。
       continue: 还是继续使用 1.0吧。
-      notice: >
-      中国中丝集控系统 遇到数据库迁移错误。<br>可能因为您还没有更新到 中国中丝集控系统 2.0。
+      notice: 中国中丝集控系统 遇到数据库迁移错误。<br>可能因为您还没有更新到 中国中丝集控系统 2.0。
       upgrade: 告诉我如何升级到 2.0!
       version: 我们已经发布了新版中国中丝集控系统，但您的数据库不兼容。
     messages:
