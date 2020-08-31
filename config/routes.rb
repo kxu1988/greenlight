@@ -35,6 +35,7 @@ Rails.application.routes.draw do
 
   # Admin resouces
   resources :admins, only: [:index]
+  resources :screens
 
   scope '/admins' do
     # Panel Tabs
