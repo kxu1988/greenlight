@@ -70,7 +70,7 @@ gem 'redcarpet'
 
 # For limiting access based on user roles
 gem 'cancancan', '~> 2.0'
-
+gem 'rest-client'
 # Active Storage gems
 gem 'aws-sdk-s3', '~> 1.75'
 gem 'google-cloud-storage', '~> 1.26'

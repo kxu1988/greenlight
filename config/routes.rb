@@ -36,6 +36,9 @@ Rails.application.routes.draw do
   # Admin resouces
   resources :admins, only: [:index]
   resources :screens
+  get 'all_device',to: 'screens#all_device' 
+  get 'channels',to: 'screens#channels' 
+
 
   scope '/admins' do
     # Panel Tabs

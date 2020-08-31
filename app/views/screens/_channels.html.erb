@@ -1,0 +1,9 @@
+<h3><%=@device%></h3>
+<% @channels.each do |channel| %>
+ <ul>
+    <li style="width:30%;float:left">
+    <%= check_box_tag 'roles[]', channel["Name"]%>  
+    <%= label_tag channel["Name"] %>  
+    </li>
+  </ul>
+<% end %>  
