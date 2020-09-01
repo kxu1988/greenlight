@@ -2,7 +2,7 @@
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">轮播通道设置</h5>
+        <h5 class="modal-title" id="exampleModalLabel">第<%=@id%>屏轮播通道设置</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -25,7 +25,34 @@
     
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
-        <button type="button" class="btn btn-primary">保存</button>
+        <button type="button" id="submit" class="btn btn-primary">保存</button>
       </div>
     </div>
   </div>
+
+  <script>
+    $("#submit").click(function() {
+      var device_name = $("#device_name").text();
+      var device_id = $("#device_id").text();
+      var length = $(":checked").length;
+      var channels = [];
+      var screen_id = <%=@id%>;
+      for(i=0;i<length;i++){
+        var channel = {};
+        channel.id = $(":checked")[0].id;
+        channel.device = $(":checked")[0].value;
+        channels.push(channel);
+      }
+
+      $.ajax({
+        type:"PUT",
+        url:"/screens/"+screen_id + "?channels=" + JSON.stringify(channels) + "&device_name=" + device_name,
+        datatype: "json",
+              
+        success:function(data){
+          alert("保存成功");
+          $('#exampleModal').modal('hide');
+        }        
+      });
+    });
+  </script>

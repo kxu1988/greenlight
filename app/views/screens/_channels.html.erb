@@ -1,9 +1,15 @@
-<h3><%=@device%></h3>
+<h3 id="device_name"><%=@device%></h3>
+<p>设备ID：<span id="device_id"><%=@device_id%></span></p>
 <% @channels.each do |channel| %>
  <ul>
     <li style="width:30%;float:left">
-    <%= check_box_tag 'roles[]', channel["Name"]%>  
-    <%= label_tag channel["Name"] %>  
+      <%= check_box_tag channel["ID"], channel["DeviceID"]%>  
+      <%= label_tag channel["Name"] %>
+      <% if channel["DeviceOnline"] == true%>
+        <span class="badge badge-pill badge-primary">在线</span>
+        <% else%>
+        <span class="badge badge-pill badge-danger">离线</span>
+      <%end%>
     </li>
   </ul>
 <% end %>  

@@ -190,5 +190,20 @@ table {
 
 .screen{
   height: 15vw;
+  position: relative;
+}
+
+.screen-inner{
   line-height: 15vw;
+}
+
+.screen-head{
+  padding: 2px;
+  position:absolute;
+  z-index:999;
+  bottom:0px;
+  width: 100%;
+  color: #eeeeee;
+  opacity: 0.3;
+  background-color: #000000;
 }

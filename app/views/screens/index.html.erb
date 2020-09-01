@@ -2,7 +2,12 @@
     <h1 class="mt-4 text-center">中丝集团安全监管中心</h1>
     <div class="d-flex flex-row">
         <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <%= link_to '监控1：请设置轮播通道', '/all_device?id=1', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            <div class="screen-inner">
+                    <%= link_to '监控1：请设置轮播通道', '/all_device?id=1', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+            <%if @screen_1.nil?%>
+            <%else%>
+            <div class="screen-head"><%= @screen_1.name %></div><%end%>
         </div>
         <div class="screen m-1 flex-fill bg-dark text-white text-center">
             <%= link_to '监控2：请设置轮播通道', '/all_device?id=2', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
