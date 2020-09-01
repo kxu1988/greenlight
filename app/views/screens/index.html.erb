@@ -7,39 +7,346 @@
             </div>
             <%if @screen_1.nil?%>
             <%else%>
-            <div class="screen-head"><%= @screen_1.name %></div><%end%>
+            <div class="screen-head">
+            <%= link_to @screen_1.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_1"}%>
+            </div><%end%>
         </div>
-        <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <%= link_to '监控2：请设置轮播通道', '/all_device?id=2', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+
+         <div class="screen m-1 flex-fill bg-dark text-white text-center">
+            <div class="screen-inner">
+                    <%= link_to '监控2：请设置轮播通道', '/all_device?id=2', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+            <%if @screen_2.nil?%>
+            <%else%>
+            <div class="screen-head">
+            <%= link_to @screen_2.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_2"}%>
+            </div><%end%>
         </div>
-        <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <%= link_to '监控3：请设置轮播通道', '/all_device?id=3', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+
+         <div class="screen m-1 flex-fill bg-dark text-white text-center">
+            <div class="screen-inner">
+                    <%= link_to '监控3：请设置轮播通道', '/all_device?id=3', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+            <%if @screen_3.nil?%>
+            <%else%>
+            <div class="screen-head">
+            <%= link_to @screen_3.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_3"}%>
+            </div><%end%>
         </div>
     </div>
 
-     <div class="d-flex flex-row">
+    <div class="d-flex flex-row">
         <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <%= link_to '监控4：请设置轮播通道', '/all_device?id=1', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            <div class="screen-inner">
+                    <%= link_to '监控4：请设置轮播通道', '/all_device?id=4', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+            <%if @screen_4.nil?%>
+            <%else%>
+            <div class="screen-head">
+            <%= link_to @screen_4.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_4"}%>
+            </div><%end%>
         </div>
-        <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <%= link_to '监控5：请设置轮播通道', '/all_device?id=2', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+
+         <div class="screen m-1 flex-fill bg-dark text-white text-center">
+            <div class="screen-inner">
+                    <%= link_to '监控5：请设置轮播通道', '/all_device?id=5', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+            <%if @screen_5.nil?%>
+            <%else%>
+            <div class="screen-head">
+            <%= link_to @screen_5.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_5"}%>
+            </div><%end%>
         </div>
-        <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <%= link_to '监控6：请设置轮播通道', '/all_device?id=3', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+
+         <div class="screen m-1 flex-fill bg-dark text-white text-center">
+            <div class="screen-inner">
+                    <%= link_to '监控6：请设置轮播通道', '/all_device?id=6', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+            <%if @screen_6.nil?%>
+            <%else%>
+            <div class="screen-head">
+            <%= link_to @screen_6.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_6"}%>
+            </div><%end%>
         </div>
     </div>
 
-      <div class="d-flex flex-row">
+    <div class="d-flex flex-row">
         <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <%= link_to '监控7：请设置轮播通道', '/all_device?id=1', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            <div class="screen-inner">
+                    <%= link_to '监控7：请设置轮播通道', '/all_device?id=7', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+            <%if @screen_7.nil?%>
+            <%else%>
+            <div class="screen-head">
+            <%= link_to @screen_7.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_7"}%>
+            </div><%end%>
         </div>
-        <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <%= link_to '监控8：请设置轮播通道', '/all_device?id=2', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+
+         <div class="screen m-1 flex-fill bg-dark text-white text-center">
+            <div class="screen-inner">
+                    <%= link_to '监控8：请设置轮播通道', '/all_device?id=8', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+            <%if @screen_8.nil?%>
+            <%else%>
+            <div class="screen-head">
+            <%= link_to @screen_8.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_8"}%>
+            </div><%end%>
         </div>
-        <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <%= link_to '监控9：请设置轮播通道', '/all_device?id=3', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+
+         <div class="screen m-1 flex-fill bg-dark text-white text-center">
+            <div class="screen-inner">
+                    <%= link_to '监控9：请设置轮播通道', '/all_device?id=9', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+            <%if @screen_9.nil?%>
+            <%else%>
+            <div class="screen-head">
+            <%= link_to @screen_9.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_9"}%>
+            </div><%end%>
         </div>
     </div>
+
+      
 </div>
 
 <div class="modal hide" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+
+<div class="modal" id="modal_1" tabindex="-1" role="dialog" aria-labelledby="modal_1" aria-hidden="true">
+<!-- Modal -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">第1屏轮播通道列表</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+        <% @channel_1s.each do |channel_1|%>
+           <li class="list-group-item">
+                <p class="mb-1"> <%= channel_1.name%></p>
+                <small><%= channel_1.channel%></small>
+            </li>
+        <%end%></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal_2" tabindex="-1" role="dialog" aria-labelledby="modal_2" aria-hidden="true">
+<!-- Modal -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">第2屏轮播通道列表</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+        <% @channel_2s.each do |channel_2|%>
+           <li class="list-group-item">
+                <p class="mb-1"> <%= channel_2.name%></p>
+                <small><%= channel_2.channel%></small>
+            </li>
+        <%end%></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal_3" tabindex="-1" role="dialog" aria-labelledby="modal_3" aria-hidden="true">
+<!-- Modal -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">第3屏轮播通道列表</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+        <% @channel_3s.each do |channel_3|%>
+           <li class="list-group-item">
+                <p class="mb-1"> <%= channel_3.name%></p>
+                <small><%= channel_3.channel%></small>
+            </li>
+        <%end%></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="modal_4" tabindex="-1" role="dialog" aria-labelledby="modal_4" aria-hidden="true">
+<!-- Modal -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">第4屏轮播通道列表</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+        <% @channel_4s.each do |channel_4|%>
+           <li class="list-group-item">
+                <p class="mb-1"> <%= channel_4.name%></p>
+                <small><%= channel_4.channel%></small>
+            </li>
+        <%end%></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal_5" tabindex="-1" role="dialog" aria-labelledby="modal_5" aria-hidden="true">
+<!-- Modal -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">第5屏轮播通道列表</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+        <% @channel_5s.each do |channel_5|%>
+           <li class="list-group-item">
+                <p class="mb-1"> <%= channel_5.name%></p>
+                <small><%= channel_5.channel%></small>
+            </li>
+        <%end%></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="modal_6" tabindex="-1" role="dialog" aria-labelledby="modal_6" aria-hidden="true">
+<!-- Modal -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">第6屏轮播通道列表</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+        <% @channel_6s.each do |channel_6|%>
+           <li class="list-group-item">
+                <p class="mb-1"> <%= channel_6.name%></p>
+                <small><%= channel_6.channel%></small>
+            </li>
+        <%end%></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal_7" tabindex="-1" role="dialog" aria-labelledby="modal_7" aria-hidden="true">
+<!-- Modal -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">第7屏轮播通道列表</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+        <% @channel_7s.each do |channel_7|%>
+           <li class="list-group-item">
+                <p class="mb-1"> <%= channel_7.name%></p>
+                <small><%= channel_7.channel%></small>
+            </li>
+        <%end%></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="modal_8" tabindex="-1" role="dialog" aria-labelledby="modal_8" aria-hidden="true">
+<!-- Modal -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">第8屏轮播通道列表</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+        <% @channel_8s.each do |channel_8|%>
+           <li class="list-group-item">
+                <p class="mb-1"> <%= channel_8.name%></p>
+                <small><%= channel_8.channel%></small>
+            </li>
+        <%end%></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal_9" tabindex="-1" role="dialog" aria-labelledby="modal_9" aria-hidden="true">
+<!-- Modal -->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">第9屏轮播通道列表</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+        <% @channel_9s.each do |channel_9|%>
+           <li class="list-group-item">
+                <p class="mb-1"> <%= channel_9.name%></p>
+                <small><%= channel_9.channel%></small>
+            </li>
+        <%end%></ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

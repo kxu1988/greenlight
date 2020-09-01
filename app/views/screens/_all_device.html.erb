@@ -34,16 +34,17 @@
     $("#submit").click(function() {
       var device_name = $("#device_name").text();
       var device_id = $("#device_id").text();
-      var length = $(":checked").length;
       var channels = [];
       var screen_id = <%=@id%>;
-      for(i=0;i<length;i++){
-        var channel = {};
-        channel.id = $(":checked")[0].id;
-        channel.device = $(":checked")[0].value;
-        channels.push(channel);
-      }
 
+      $(":checked").each(function () {
+        var channel = {};
+        channel.id = $(this).attr("id");
+        channel.name = $(this).next().text();
+        channel.device = $(this).attr("value");
+        channels.push(channel);
+      })
+    
       $.ajax({
         type:"PUT",
         url:"/screens/"+screen_id + "?channels=" + JSON.stringify(channels) + "&device_name=" + device_name,
@@ -51,7 +52,8 @@
               
         success:function(data){
           alert("保存成功");
-          $('#exampleModal').modal('hide');
+          location.reload();
+          //$('#exampleModal').modal('hide');
         }        
       });
     });

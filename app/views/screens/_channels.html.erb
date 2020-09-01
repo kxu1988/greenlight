@@ -3,7 +3,7 @@
 <% @channels.each do |channel| %>
  <ul>
     <li style="width:30%;float:left">
-      <%= check_box_tag channel["ID"], channel["DeviceID"]%>  
+      <%= check_box_tag channel["ID"], channel["DeviceID"] %>  
       <%= label_tag channel["Name"] %>
       <% if channel["DeviceOnline"] == true%>
         <span class="badge badge-pill badge-primary">在线</span>
