@@ -47,7 +47,7 @@
     
       $.ajax({
         type:"PUT",
-        url:"/screens/"+screen_id + "?channels=" + JSON.stringify(channels) + "&device_name=" + device_name,
+        url:"/screens/"+screen_id + "?channels=" + JSON.stringify(channels) + "&device_name=" + device_name + "&device_id=" + device_id,
         datatype: "json",
               
         success:function(data){

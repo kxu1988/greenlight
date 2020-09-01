@@ -1,5 +1,7 @@
 <div class="container">
-    <h1 class="mt-4 text-center">中丝集团安全监管中心</h1>
+    <h1 class="mt-4 text-center">中丝集团安全监管中心
+      <span id="fullscreen"><i class="fas fa-play-circle pr-1"></i></span>
+    </h1>
     <div class="d-flex flex-row">
         <div class="screen m-1 flex-fill bg-dark text-white text-center">
             <div class="screen-inner">
@@ -8,7 +10,7 @@
             <%if @screen_1.nil?%>
             <%else%>
             <div class="screen-head">
-            <%= link_to @screen_1.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_1"}%>
+            <%= link_to @screen_1.name , '', {'id'=>"screen_1",'data-device'=>@screen_1.device,'data-toggle'=>"modal",'data-target'=>"#modal_1"}%>
             </div><%end%>
         </div>
 
@@ -19,7 +21,7 @@
             <%if @screen_2.nil?%>
             <%else%>
             <div class="screen-head">
-            <%= link_to @screen_2.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_2"}%>
+            <%= link_to @screen_2.name , '', {'id'=>"screen_2",'data-device'=>@screen_2.device,'data-toggle'=>"modal",'data-target'=>"#modal_2"}%>
             </div><%end%>
         </div>
 
@@ -30,7 +32,7 @@
             <%if @screen_3.nil?%>
             <%else%>
             <div class="screen-head">
-            <%= link_to @screen_3.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_3"}%>
+            <%= link_to @screen_3.name , '', {'id'=>"screen_3",'data-device'=>@screen_3.device,'data-toggle'=>"modal",'data-target'=>"#modal_3"}%>
             </div><%end%>
         </div>
     </div>
@@ -43,7 +45,7 @@
             <%if @screen_4.nil?%>
             <%else%>
             <div class="screen-head">
-            <%= link_to @screen_4.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_4"}%>
+            <%= link_to @screen_4.name , '', {'id'=>"screen_4",'data-device'=>@screen_4.device,'data-toggle'=>"modal",'data-target'=>"#modal_4"}%>
             </div><%end%>
         </div>
 
@@ -54,7 +56,7 @@
             <%if @screen_5.nil?%>
             <%else%>
             <div class="screen-head">
-            <%= link_to @screen_5.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_5"}%>
+            <%= link_to @screen_5.name , '', {'id'=>"screen_5",'data-device'=>@screen_5.device,'data-toggle'=>"modal",'data-target'=>"#modal_5"}%>
             </div><%end%>
         </div>
 
@@ -65,7 +67,7 @@
             <%if @screen_6.nil?%>
             <%else%>
             <div class="screen-head">
-            <%= link_to @screen_6.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_6"}%>
+            <%= link_to @screen_6.name , '', {'id'=>"screen_6",'data-device'=>@screen_6.device,'data-toggle'=>"modal",'data-target'=>"#modal_6"}%>
             </div><%end%>
         </div>
     </div>
@@ -78,7 +80,7 @@
             <%if @screen_7.nil?%>
             <%else%>
             <div class="screen-head">
-            <%= link_to @screen_7.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_7"}%>
+            <%= link_to @screen_7.name , '', {'id'=>"screen_7",'data-device'=>@screen_7.device,'data-toggle'=>"modal",'data-target'=>"#modal_7"}%>
             </div><%end%>
         </div>
 
@@ -89,7 +91,7 @@
             <%if @screen_8.nil?%>
             <%else%>
             <div class="screen-head">
-            <%= link_to @screen_8.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_8"}%>
+            <%= link_to @screen_8.name , '', {'id'=>"screen_8",'data-device'=>@screen_8.device,'data-toggle'=>"modal",'data-target'=>"#modal_8"}%>
             </div><%end%>
         </div>
 
@@ -100,7 +102,7 @@
             <%if @screen_9.nil?%>
             <%else%>
             <div class="screen-head">
-            <%= link_to @screen_9.name , '', {'data-toggle'=>"modal",'data-target'=>"#modal_9"}%>
+            <%= link_to @screen_9.name , '', {'id'=>"screen_9",'data-device'=>@screen_9.device,'data-toggle'=>"modal",'data-target'=>"#modal_9"}%>
             </div><%end%>
         </div>
     </div>
@@ -121,11 +123,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <ul class="list-group">
+        <ul class="list-group player"  data-screen="screen_1">
         <% @channel_1s.each do |channel_1|%>
            <li class="list-group-item">
                 <p class="mb-1"> <%= channel_1.name%></p>
-                <small><%= channel_1.channel%></small>
+                <small class="channel_no"><%= channel_1.channel%></small>
             </li>
         <%end%></ul>
       </div>
@@ -147,11 +149,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <ul class="list-group">
+        <ul class="list-group player" data-screen="screen_2">
         <% @channel_2s.each do |channel_2|%>
            <li class="list-group-item">
                 <p class="mb-1"> <%= channel_2.name%></p>
-                <small><%= channel_2.channel%></small>
+                <small class="channel_no"><%= channel_2.channel%></small>
             </li>
         <%end%></ul>
       </div>
@@ -173,11 +175,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <ul class="list-group">
+        <ul class="list-group player"  data-screen="screen_3">
         <% @channel_3s.each do |channel_3|%>
            <li class="list-group-item">
                 <p class="mb-1"> <%= channel_3.name%></p>
-                <small><%= channel_3.channel%></small>
+                <small class="channel_no"><%= channel_3.channel%></small>
             </li>
         <%end%></ul>
       </div>
@@ -200,11 +202,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <ul class="list-group">
+        <ul class="list-group player" data-screen="screen_4">
         <% @channel_4s.each do |channel_4|%>
            <li class="list-group-item">
                 <p class="mb-1"> <%= channel_4.name%></p>
-                <small><%= channel_4.channel%></small>
+                <small class="channel_no"><%= channel_4.channel%></small>
             </li>
         <%end%></ul>
       </div>
@@ -226,11 +228,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <ul class="list-group">
+        <ul class="list-group player" data-screen="screen_5">
         <% @channel_5s.each do |channel_5|%>
            <li class="list-group-item">
                 <p class="mb-1"> <%= channel_5.name%></p>
-                <small><%= channel_5.channel%></small>
+                <small class="channel_no"><%= channel_5.channel%></small>
             </li>
         <%end%></ul>
       </div>
@@ -253,11 +255,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <ul class="list-group">
+        <ul class="list-group player" data-screen="screen_6">
         <% @channel_6s.each do |channel_6|%>
            <li class="list-group-item">
                 <p class="mb-1"> <%= channel_6.name%></p>
-                <small><%= channel_6.channel%></small>
+                <small class="channel_no"><%= channel_6.channel%></small>
             </li>
         <%end%></ul>
       </div>
@@ -279,11 +281,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <ul class="list-group">
+        <ul class="list-group player" data-screen="screen_7">
         <% @channel_7s.each do |channel_7|%>
            <li class="list-group-item">
                 <p class="mb-1"> <%= channel_7.name%></p>
-                <small><%= channel_7.channel%></small>
+                <small class="channel_no"><%= channel_7.channel%></small>
             </li>
         <%end%></ul>
       </div>
@@ -306,11 +308,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <ul class="list-group">
+        <ul class="list-group player" data-screen="screen_8">
         <% @channel_8s.each do |channel_8|%>
            <li class="list-group-item">
                 <p class="mb-1"> <%= channel_8.name%></p>
-                <small><%= channel_8.channel%></small>
+                <small class="channel_no"><%= channel_8.channel%></small>
             </li>
         <%end%></ul>
       </div>
@@ -332,11 +334,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <ul class="list-group">
+        <ul class="list-group player" data-screen="screen_9">
         <% @channel_9s.each do |channel_9|%>
            <li class="list-group-item">
                 <p class="mb-1"> <%= channel_9.name%></p>
-                <small><%= channel_9.channel%></small>
+                <small class="channel_no"><%= channel_9.channel%></small>
             </li>
         <%end%></ul>
       </div>
@@ -347,6 +349,66 @@
   </div>
 </div>
 
+<script>
 
+ $("#fullscreen").click(function name(params) {
+  fullScreen();
+ })
+//全屏
+function fullScreen() {
+    var element = document.documentElement;
+    if (element.requestFullscreen) {
+        element.requestFullscreen();
+    } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+    }
+}
+
+//退出全屏 
+function exitFullscreen() {
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+    }
+}
+
+//监听window是否全屏，并进行相应的操作,支持esc键退出
+window.onresize = function() {
+    var isFull=!!(document.webkitIsFullScreen || document.mozFullScreen || 
+        document.msFullscreenElement || document.fullscreenElement
+    );//!document.webkitIsFullScreen都为true。因此用!!
+    if (isFull==false) {
+        $(".header ").show();
+        $(".footer").show();
+    }else{
+        $(".header ").hide();
+        $(".footer").hide();
+
+        $(".player").each (function() {
+          if($(this).children().length > 0){
+              //1.设置第一个子节点为player
+              var player = $(this).children("li:first-child")
+              player.addClass("play");
+              channel = player.children(".channel_no")[0].innerHTML;
+              screen = $(this).data("screen");
+              device = $("#" + screen).data("device");
+              alert(device);
+              //2. 请求开始播放接口，如果返回成功，则插入video标签
+              //3. 设置timer
+          } 
+
+        });
+    }
+}
+</script>
 
 

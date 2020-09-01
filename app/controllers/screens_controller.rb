@@ -35,6 +35,7 @@ class ScreensController < ApplicationController
 
     screen = Screen.find_or_create_by(number:screen_id)
     screen.name = params[:device_name]
+    screen.device = params[:device_id]
     screen.save
 
     Channel.where(number:screen_id).destroy_all
