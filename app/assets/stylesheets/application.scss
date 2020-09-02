@@ -189,12 +189,12 @@ table {
 }
 
 .screen{
-  height: 15vw;
+  height: 18vw;
   position: relative;
 }
 
 .screen-inner{
-  line-height: 15vw;
+  line-height: 18vw;
 }
 
 .screen-head{
@@ -210,4 +210,17 @@ table {
 
 .screen-head a{
   color: #eeeeee!important;
+}
+
+.screen-container{
+  max-width: 1600px;
+  width: 100%;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.screen-full{
+  height: 20px;
 }

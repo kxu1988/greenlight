@@ -1,109 +1,116 @@
-<div class="container">
-    <h1 class="mt-4 text-center">中丝集团安全监管中心
-      <span id="fullscreen"><i class="fas fa-play-circle pr-1"></i></span>
+<div class="screen-container">
+    <div class="screen-full"></div>
+    <h1 class="mt-4 text-center">中丝集团安全监管中心<span id="fullscreen"><i class="fas fa-play-circle pr-1"></i></span>
     </h1>
     <div class="d-flex flex-row">
         <div class="screen m-1 flex-fill bg-dark text-white text-center">
+            <%if @screen_1.nil?%>
+            <%else%>
+              <div class="screen-head">
+              <%= link_to @screen_1.name , '', {'id'=>"screen_1",'data-device'=>@screen_1.device,'data-toggle'=>"modal",'data-target'=>"#modal_1"}%>
+              </div>
+            <%end%>
             <div class="screen-inner">
                     <%= link_to '监控1：请设置轮播通道', '/all_device?id=1', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
             </div>
-            <%if @screen_1.nil?%>
-            <%else%>
-            <div class="screen-head">
-            <%= link_to @screen_1.name , '', {'id'=>"screen_1",'data-device'=>@screen_1.device,'data-toggle'=>"modal",'data-target'=>"#modal_1"}%>
-            </div><%end%>
+            
         </div>
 
          <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <div class="screen-inner">
-                    <%= link_to '监控2：请设置轮播通道', '/all_device?id=2', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
-            </div>
             <%if @screen_2.nil?%>
             <%else%>
             <div class="screen-head">
             <%= link_to @screen_2.name , '', {'id'=>"screen_2",'data-device'=>@screen_2.device,'data-toggle'=>"modal",'data-target'=>"#modal_2"}%>
             </div><%end%>
+            <div class="screen-inner">
+                    <%= link_to '监控2：请设置轮播通道', '/all_device?id=2', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
         </div>
 
          <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <div class="screen-inner">
-                    <%= link_to '监控3：请设置轮播通道', '/all_device?id=3', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
-            </div>
-            <%if @screen_3.nil?%>
+           <%if @screen_3.nil?%>
             <%else%>
             <div class="screen-head">
             <%= link_to @screen_3.name , '', {'id'=>"screen_3",'data-device'=>@screen_3.device,'data-toggle'=>"modal",'data-target'=>"#modal_3"}%>
             </div><%end%>
+            <div class="screen-inner">
+                    <%= link_to '监控3：请设置轮播通道', '/all_device?id=3', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
         </div>
     </div>
 
     <div class="d-flex flex-row">
         <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <div class="screen-inner">
-                    <%= link_to '监控4：请设置轮播通道', '/all_device?id=4', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
-            </div>
             <%if @screen_4.nil?%>
             <%else%>
             <div class="screen-head">
             <%= link_to @screen_4.name , '', {'id'=>"screen_4",'data-device'=>@screen_4.device,'data-toggle'=>"modal",'data-target'=>"#modal_4"}%>
             </div><%end%>
+            <div class="screen-inner">
+                    <%= link_to '监控4：请设置轮播通道', '/all_device?id=4', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
         </div>
 
          <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <div class="screen-inner">
-                    <%= link_to '监控5：请设置轮播通道', '/all_device?id=5', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
-            </div>
-            <%if @screen_5.nil?%>
+           <%if @screen_5.nil?%>
             <%else%>
             <div class="screen-head">
             <%= link_to @screen_5.name , '', {'id'=>"screen_5",'data-device'=>@screen_5.device,'data-toggle'=>"modal",'data-target'=>"#modal_5"}%>
             </div><%end%>
+            <div class="screen-inner">
+                    <%= link_to '监控5：请设置轮播通道', '/all_device?id=5', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+          
         </div>
 
          <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <div class="screen-inner">
-                    <%= link_to '监控6：请设置轮播通道', '/all_device?id=6', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
-            </div>
-            <%if @screen_6.nil?%>
+         <%if @screen_6.nil?%>
             <%else%>
             <div class="screen-head">
             <%= link_to @screen_6.name , '', {'id'=>"screen_6",'data-device'=>@screen_6.device,'data-toggle'=>"modal",'data-target'=>"#modal_6"}%>
             </div><%end%>
+            <div class="screen-inner">
+                    <%= link_to '监控6：请设置轮播通道', '/all_device?id=6', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+            
         </div>
     </div>
 
     <div class="d-flex flex-row">
         <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <div class="screen-inner">
-                    <%= link_to '监控7：请设置轮播通道', '/all_device?id=7', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
-            </div>
-            <%if @screen_7.nil?%>
+        <%if @screen_7.nil?%>
             <%else%>
             <div class="screen-head">
             <%= link_to @screen_7.name , '', {'id'=>"screen_7",'data-device'=>@screen_7.device,'data-toggle'=>"modal",'data-target'=>"#modal_7"}%>
             </div><%end%>
+            <div class="screen-inner">
+                    <%= link_to '监控7：请设置轮播通道', '/all_device?id=7', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+            
         </div>
 
          <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <div class="screen-inner">
-                    <%= link_to '监控8：请设置轮播通道', '/all_device?id=8', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
-            </div>
-            <%if @screen_8.nil?%>
+         <%if @screen_8.nil?%>
             <%else%>
             <div class="screen-head">
             <%= link_to @screen_8.name , '', {'id'=>"screen_8",'data-device'=>@screen_8.device,'data-toggle'=>"modal",'data-target'=>"#modal_8"}%>
             </div><%end%>
+            <div class="screen-inner">
+                    <%= link_to '监控8：请设置轮播通道', '/all_device?id=8', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+            
         </div>
 
          <div class="screen m-1 flex-fill bg-dark text-white text-center">
-            <div class="screen-inner">
-                    <%= link_to '监控9：请设置轮播通道', '/all_device?id=9', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
-            </div>
-            <%if @screen_9.nil?%>
+          <%if @screen_9.nil?%>
             <%else%>
             <div class="screen-head">
             <%= link_to @screen_9.name , '', {'id'=>"screen_9",'data-device'=>@screen_9.device,'data-toggle'=>"modal",'data-target'=>"#modal_9"}%>
             </div><%end%>
+            <div class="screen-inner">
+                    <%= link_to '监控9：请设置轮播通道', '/all_device?id=9', {:remote => true, 'data-toggle'=>"modal",'data-target'=>"#exampleModal"}%>
+            </div>
+           
         </div>
     </div>
 
@@ -381,6 +388,19 @@ function exitFullscreen() {
     }
 }
 
+function stream(screen,serial,code) {
+    $.ajax({
+        type:"GET",
+        url:"http://119.253.35.41:10000/api/v1/stream/start?serial="+serial + "&code=" + code,
+        datatype: "json",
+              
+        success:function(data){
+           $(".screen-inner").hide();
+           $("#" + screen).parent().before("<live-player video-url="+data["WS_FLV"]+" class='live_player' controls='false' autoplay='true' muted='true' live='true' aspect='16:9' stretch='true'></live-player>");
+        }        
+      });
+}
+
 //监听window是否全屏，并进行相应的操作,支持esc键退出
 window.onresize = function() {
     var isFull=!!(document.webkitIsFullScreen || document.mozFullScreen || 
@@ -389,6 +409,8 @@ window.onresize = function() {
     if (isFull==false) {
         $(".header ").show();
         $(".footer").show();
+        $(".live_player").remove();
+        $(".screen-inner").show();
     }else{
         $(".header ").hide();
         $(".footer").hide();
@@ -401,8 +423,8 @@ window.onresize = function() {
               channel = player.children(".channel_no")[0].innerHTML;
               screen = $(this).data("screen");
               device = $("#" + screen).data("device");
-              alert(device);
               //2. 请求开始播放接口，如果返回成功，则插入video标签
+              stream(screen,device,channel);
               //3. 设置timer
           } 
 
