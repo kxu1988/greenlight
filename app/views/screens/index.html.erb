@@ -391,14 +391,68 @@ function exitFullscreen() {
 function stream(screen,serial,code) {
     $.ajax({
         type:"GET",
-        url:"http://119.253.35.41:10000/api/v1/stream/start?serial="+serial + "&code=" + code,
+        url:"http://119.253.35.41:10000/api/v1/stream/start?serial="+serial + "&code=" + code +"&checkchannelstatus=true",
         datatype: "json",
               
         success:function(data){
-           $(".screen-inner").hide();
-           $("#" + screen).parent().before("<live-player video-url="+data["WS_FLV"]+" class='live_player' controls='false' autoplay='true' muted='true' live='true' aspect='16:9' stretch='true'></live-player>");
+          $(".screen-inner").hide();
+          $("#" + screen).parent().before("<live-player video-url="+data["WS_FLV"]+" id='live_"+ screen + "' class='live_player' controls='false' autoplay='true' muted='true' live='true' aspect='16:9' stretch='true'></live-player>");
+        },
+        error:function(){
+          $(".screen-inner").hide();
+          $("#" + screen).parent().before("<live-player video-url='' id='live_"+ screen + "' class='live_player' controls='false' live='true' aspect='16:9' stretch='true'></live-player>");
         }        
       });
+}
+
+function new_release(device,code,current_code,screen){
+    $.ajax({
+      type:"GET",
+      url:"http://119.253.35.41:10000/api/v1/stream/stop?serial="+device + "&code=" + code,
+      datatype: "json",
+            
+      complete:function(){
+      //进行video-url替换
+        $.ajax({
+          type:"GET",
+          async:false,
+          url:"http://119.253.35.41:10000/api/v1/stream/start?serial="+device + "&code=" + current_code +"&checkchannelstatus=true",
+          datatype: "json",
+          success:function(data){
+            $('#live_'+ screen).attr("video-url",data["WS_FLV"]);
+            console.log("=======================live_"+screen);
+            console.log("======================="+data["WS_FLV"]);
+          },
+          error:function(){
+            $('#live_'+ screen).attr("video-url","");
+            console.log("==================failed=====");
+          }        
+        });
+      }        
+  });
+}
+
+function src_replace(){
+    $(".play").each (function() {
+      if ($(this).siblings().length > 0){
+         //则寻找下一个
+        if($(this).next().length > 0){
+          current_player = $(this).next()
+        }else{
+          current_player = $(this).siblings(":first")
+        }
+        screen = $(this).parent().data("screen");
+        $(this).removeClass("play");
+        current_player.addClass("play");
+        console.log("======================="+screen);
+        device = $("#" + screen).data("device");
+        code = $(this).children(".channel_no")[0].innerHTML
+        current_code = current_player.children(".channel_no")[0].innerHTML
+        //暂停流播放，并设置新的player类属性
+        new_release(device,code,current_code,screen);
+      }
+    }); 
+    iTime = setTimeout(src_replace, 60000);
 }
 
 //监听window是否全屏，并进行相应的操作,支持esc键退出
@@ -411,6 +465,9 @@ window.onresize = function() {
         $(".footer").show();
         $(".live_player").remove();
         $(".screen-inner").show();
+        if(iTime !=""){
+          clearTimeout(iTime);
+        }
     }else{
         $(".header ").hide();
         $(".footer").hide();
@@ -425,12 +482,10 @@ window.onresize = function() {
               device = $("#" + screen).data("device");
               //2. 请求开始播放接口，如果返回成功，则插入video标签
               stream(screen,device,channel);
-              //3. 设置timer
           } 
-
         });
+        //3. 设置timer,当前节点有多少个兄弟，如果大于1
+        setTimeout(src_replace, 60000);         
     }
 }
 </script>
-
-
