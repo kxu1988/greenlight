@@ -30,7 +30,7 @@
           <%= link_to home_page, class: "px-3 mx-1 mt-1 header-nav #{active_home}" do %>
             <i class="fas fa-home pr-1 "></i><span class="d-none d-sm-inline-block"><%= t("header.dropdown.home") %></span>
           <% end %>
-          <a href="/screens" class="px-3 mx-1 mt-1 header-nav">
+          <a href="/b/screens" class="px-3 mx-1 mt-1 header-nav">
             <i class="fas fa-video pr-1"></i><span>监管中心</span>
           </a>
           <% if current_user.role.get_permission("can_create_rooms") && !current_user.has_role?(:super_admin) && !hide_recording_tables %>
