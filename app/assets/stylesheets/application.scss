@@ -213,7 +213,6 @@ table {
 }
 
 .screen-container{
-  max-width: 1600px;
   width: 100%;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
@@ -223,4 +222,34 @@ table {
 
 .screen-full{
   height: 20px;
+}
+
+#htext{
+  position:absolute;
+  letter-spacing: 3px;
+  top:0px;
+  width: 100%;
+  height: 60px; 
+  opacity: 50%;
+  background-color: black;
+  z-index: 998;
+}
+
+.marquee {
+  width: 400px;
+line-height: 50px;
+color: #ffffff;
+font-size: 28px;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
 }
