@@ -14,7 +14,7 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <% @devices.each do |device|%>
-                  <%= link_to '/channels?id='+device["ID"]+'&name='+device["Name"], {:remote => true, :class=>"dropdown-item",'data-value'=>device["Name"]} do%>
+                  <%= link_to 'channels?id='+device["ID"]+'&name='+device["Name"], {:remote => true, :class=>"dropdown-item",'data-value'=>device["Name"]} do%>
                   <span class="channel"><%= device["Name"] %></span>
                   <%end%>
             <%end%>
